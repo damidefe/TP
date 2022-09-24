@@ -1,0 +1,28 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Articulos</h1>
+{% endblock %}
+
+{% block contenido %}
+
+{% if mensaje %}
+<h2>{{ mensaje }}</h2>
+
+{% else %}
+
+<h1>Resultados de la busqueda</h1>
+
+{% for articulo in articulos %}
+
+<h2>----------------</h2>
+<h2>Nombre: {{ articulo.nombre }}</h2>
+<h2>Descripcion: {{ articulo.descripcion }}</h2>
+<h2>Precio: ${{ articulo.precio }}</h2>
+<h2>----------------</h2>
+
+{% endfor %}
+{% endif %}
+{% endblock %}

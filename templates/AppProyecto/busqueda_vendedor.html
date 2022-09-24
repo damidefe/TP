@@ -1,0 +1,21 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Busqueda de Vendedores</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<h1>Buscar Vendedor</h1>
+
+<form action="/resultado_vendedores/", method="GET"> {% csrf_token %}
+
+<p>CUIT del Vendedor: </p><input type="text", name="cuit", id="cuit">
+
+<input type="submit", value="Buscar">
+</form>
+<h4>{{ mensaje }}</h4>
+
+{% endblock %}

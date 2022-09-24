@@ -1,0 +1,12 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Clientes</h1>
+{% endblock %}
+
+{% block contenido %}
+<a class="btn btn-light" href="{% url 'form_clientes' %}">Agregar nuevo</a>
+<a class="btn btn-light" href="{% url 'busqueda_cliente' %}">Buscar en la DB</a>
+{% endblock contenido %}

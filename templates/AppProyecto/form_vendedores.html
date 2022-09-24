@@ -1,0 +1,20 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Vendedores</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<form action="/form_vendedores/", method="POST"> {% csrf_token %}
+
+<table>
+    {{ formulario.as_table }}
+</table>
+
+<input type="submit", value="Enviar">
+</form>
+
+{% endblock %}

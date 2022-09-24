@@ -1,0 +1,20 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Barra de Navegacion, aqui podras ver todas las paginas </h1>
+<a class="btn btn-primary" href="{% url 'inicio' %}">Inicio</a>
+<a class="btn btn-primary" href="{% url 'navvar' %}">Nav var</a>
+<a class="btn btn-primary" href="{% url 'home_clientes' %}">Clientes</a>
+<a class="btn btn-primary" href="{% url 'home_vendedores' %}">Vendedores</a>
+<a class="btn btn-primary" href="{% url 'home_articulos' %}">Articulos</a>
+<a class="btn btn-primary" href="{% url 'pages' %}">Vista de Blogs</a>
+<a class="btn btn-primary" href="{% url 'about' %}">About</a>
+{% endblock %}
+
+{% block contenido %}
+
+<h1>{{ mensaje }}</h1>
+
+{% endblock %}

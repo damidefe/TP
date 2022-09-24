@@ -1,0 +1,21 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Busqueda de Articulos</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<h1>Buscar Articulos</h1>
+
+<form action="/resultado_articulos/", method="GET"> {% csrf_token %}
+
+<p>Categoria de Articulo: </p><input type="text", name="categoria", id="categoria">
+
+<input type="submit", value="Buscar">
+</form>
+<h4>{{ mensaje }}</h4>
+
+{% endblock %}

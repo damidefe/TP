@@ -1,0 +1,12 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Articulos</h1>
+{% endblock %}
+
+{% block contenido %}
+<a class="btn btn-light" href="{% url 'form_articulos' %}">Agregar nuevo</a>
+<a class="btn btn-light" href="{% url 'busqueda_articulo' %}">Buscar en la DB</a>
+{% endblock contenido %}
